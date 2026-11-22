@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 134px; /* Отступ сверху при клике на категорию, чтобы не перекрывало шапкой */
+    scroll-padding-top: 134px; /* Санатты басқанда жоғарғы панель жауып қалмас үшін шегініс */
 }
 
 body {
@@ -87,7 +87,7 @@ body::before {
     border-radius: 2px;
 }
 
-/* ПАНЕЛЬ НАВИГАЦИИ ПО КАТЕГОРИЯМ */
+/* САНАТТАР БОЙЫНША НАВИГАЦИЯ ПАНЕЛІ */
 .category-navigation {
     position: sticky;
     top: 0;
@@ -180,7 +180,7 @@ body::before {
     transform: scale(.96);
 }
 
-/* ОСНОВНОЙ КОНТЕНТ */
+/* НЕГІЗГІ МАЗМҰН */
 main {
     width: 100%;
     max-width: 680px;
@@ -188,7 +188,7 @@ main {
     padding: 12px 12px 35px;
 }
 
-/* СЕКЦИИ И КАТЕГОРИИ МЕНЮ */
+/* МӘЗІР БӨЛІМДЕРІ МЕН САНАТТАРЫ */
 .menu-section-title {
     margin: 36px 0 24px;
     font-family: var(--font-display);
@@ -227,7 +227,7 @@ main {
     background: linear-gradient(to right, rgba(217, 168, 78, 0.55), rgba(217, 168, 78, 0.04));
 }
 
-/* ТОВАРЫ */
+/* ТАУАРЛАР */
 .product {
     display: flex;
     align-items: center;
@@ -270,7 +270,7 @@ main {
     font-variant-numeric: tabular-nums;
 }
 
-/* ПОДВАЛ */
+/* ТӨМЕНГІ БӨЛІМ */
 footer {
     padding: 20px 15px 28px;
     text-align: center;
@@ -308,7 +308,7 @@ footer {
 </style>
 </head>
 
-    <!-- СКРИПТ ПОДСВЕТКИ АКТИВНОЙ КАТЕГОРИИ ПРИ СКРОЛЛЕ -->
+    <!-- АЙНАЛДЫРҒАНДА БЕЛСЕНДІ САНАТТЫ ЖАРЫҚТАНДЫРУ СКРИПТІ -->
     <script>
         const observerOptions = {
             root: null,
@@ -323,7 +323,7 @@ footer {
                     document.querySelectorAll('.categories a').forEach(link => {
                         if (link.getAttribute('href') === `#${id}`) {
                             link.classList.add('active');
-                            // Прокручиваем горизонтальный скролл к активной категории
+                            // Көлденең айналдыруды белсенді санатқа жылжытамыз
                             link.parentElement.scrollLeft = link.offsetLeft - link.parentElement.offsetWidth / 2 + link.offsetWidth / 2;
                         } else {
                             link.classList.remove('active');
@@ -351,15 +351,15 @@ footer {
     </header>
 
 
-    <!-- ДВЕ ГОРИЗОНТАЛЬНЫЕ ПАНЕЛИ КАТЕГОРИЙ -->
-    <nav class="category-navigation" aria-label="Навигация по меню">
+    <!-- ЕКІ КӨЛДЕНЕҢ САНАТ ПАНЕЛІ -->
+    <nav class="category-navigation" aria-label="Мәзір навигациясы">
         <div class="category-nav-row">
             <span class="category-nav-label">БАР</span>
-            <div class="categories" id="bar-categories" aria-label="Категории бара"></div>
+            <div class="categories" id="bar-categories" aria-label="Бар санаттары"></div>
         </div>
         <div class="category-nav-row">
-            <span class="category-nav-label">КУХНЯ</span>
-            <div class="categories" id="kitchen-categories" aria-label="Категории кухни"></div>
+            <span class="category-nav-label">АСХАНА</span>
+            <div class="categories" id="kitchen-categories" aria-label="Асхана санаттары"></div>
         </div>
     </nav>
 
@@ -368,9 +368,9 @@ footer {
         <!-- ================= БАР ================= -->
         <section class="menu-section active" id="bar">
 
-            <!-- ПИВО -->
+            <!-- БӨТЕЛКЕДЕГІ СЫРА -->
             <div class="category" id="bar-cat-13" data-menu-section="bar">
-                <h2 class="category-title">Бутылочное пиво</h2>
+                <h2 class="category-title">Бөтелкедегі сыра</h2>
 
                 <article class="product">
                     <div class="product-info">
@@ -421,9 +421,9 @@ footer {
                 </article>
             </div>
 
-            <!-- ПИВО РАЗЛИВНОЕ -->
+            <!-- ҚҰЙМА СЫРА -->
             <div class="category" id="bar-cat-14" data-menu-section="bar">
-                <h2 class="category-title">Разливное пиво</h2>
+                <h2 class="category-title">Құйма сыра</h2>
 
                 <article class="product">
                     <div class="product-info">
@@ -443,7 +443,7 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Немецкое</h3>
+                        <h3 class="product-name">Неміс сырасы</h3>
                         <div class="product-volume">0,5 л</div>
                     </div>
                     <div class="product-price">1 500 <span class="price-unit">₸</span></div>
@@ -459,16 +459,16 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">(Немецкое / Прага)</h3>
+                        <h3 class="product-name">(Неміс сырасы / Прага)</h3>
                         <div class="product-volume">3 л</div>
                     </div>
                     <div class="product-price">7 500 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- ВОДКА -->
+            <!-- АРАҚ -->
             <div class="category" id="bar-cat-7" data-menu-section="bar">
-                <h2 class="category-title">Водка</h2>
+                <h2 class="category-title">Арақ</h2>
 
                 <article class="product">
                     <div class="product-info">
@@ -520,7 +520,7 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Бульбаш особая</h3>
+                        <h3 class="product-name">Бульбаш ерекше</h3>
                         <div class="product-volume">50 мл</div>
                     </div>
                     <div class="product-price">1 100 <span class="price-unit">₸</span></div>
@@ -772,9 +772,9 @@ footer {
                 </article>
             </div>
 
-<!-- КОКТЕЙЛИ -->
+<!-- КОКТЕЙЛЬДЕР -->
             <div class="category" id="bar-cat-18" data-menu-section="bar">
-                <h2 class="category-title">Коктейли</h2>
+                <h2 class="category-title">Коктейльдер</h2>
 
                 <article class="product">
                     <div class="product-info">
@@ -875,7 +875,7 @@ footer {
                 </article>
             </div>
 
-            <!-- БРЕНДИ/КОНЬЯК -->
+            <!-- БРЕНДИ / КОНЬЯК -->
             <div class="category" id="bar-cat-2" data-menu-section="bar">
                 <h2 class="category-title">Бренди / Коньяк</h2>
 
@@ -941,14 +941,14 @@ footer {
                 </article>
             </div>
 
-            <!-- ИГРИСТОЕ ВИНО/ВИНО -->
+            <!-- КӨПІРШІКТІ ШАРАП / ШАРАП -->
             <div class="category" id="bar-cat-1" data-menu-section="bar">
-                <h2 class="category-title">Игристое вино / вино</h2>
+                <h2 class="category-title">Көпіршікті шарап / шарап</h2>
 
                 <article class="product">
                     <div class="product-info">
                         <h3 class="product-name">Lambrusco MENESTRELLO</h3>
-                        <div class="product-volume">Bianco \ Rosato \ Rosso • 0,75 л</div>
+                        <div class="product-volume">Bianco / Rosato / Rosso • 0,75 л</div>
                     </div>
                     <div class="product-price">10 000 <span class="price-unit">₸</span></div>
                 </article>
@@ -980,7 +980,7 @@ footer {
                 <article class="product">
                     <div class="product-info">
                         <h3 class="product-name">Teliani Valley Алазанская Долина</h3>
-                        <div class="product-volume">кр \ полусладкое • 0,75 л</div>
+                        <div class="product-volume">қызыл / жартылай тәтті • 0,75 л</div>
                     </div>
                     <div class="product-price">10 000 <span class="price-unit">₸</span></div>
                 </article>
@@ -988,15 +988,15 @@ footer {
                 <article class="product">
                     <div class="product-info">
                         <h3 class="product-name">Teliani Valley Алазанская Долина</h3>
-                        <div class="product-volume">бел \ полусладкое • 0,75 л</div>
+                        <div class="product-volume">ақ / жартылай тәтті • 0,75 л</div>
                     </div>
                     <div class="product-price">9 000 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- ВЕРМУТЫ -->
+            <!-- ВЕРМУТТАР -->
             <div class="category" id="bar-cat-11" data-menu-section="bar">
-                <h2 class="category-title">Вермуты</h2>
+                <h2 class="category-title">Вермуттар</h2>
 
                 <article class="product">
                     <div class="product-info">
@@ -1060,27 +1060,27 @@ footer {
                 </article>
             </div>
 
-            <!-- Закуски -->
+            <!-- СЫРАҒА ТІСБАСАР -->
             <div class="category" id="bar-cat-15" data-menu-section="bar">
-                <h2 class="category-title">К пиву</h2>
+                <h2 class="category-title">Сыраға тісбасар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Чечил</h3>
+                        <h3 class="product-name">Чечил ірімшігі</h3>
                     </div>
                     <div class="product-price">1 400 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Арахис</h3>
+                        <h3 class="product-name">Жержаңғақ</h3>
                     </div>
                     <div class="product-price">1 300 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Фисташки</h3>
+                        <h3 class="product-name">Пісте</h3>
                     </div>
                     <div class="product-price">2 000 <span class="price-unit">₸</span></div>
                 </article>
@@ -1094,15 +1094,15 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Чипсы собственного приготовления</h3>
+                        <h3 class="product-name">Өз дайындауымыздағы чипсы</h3>
                     </div>
                     <div class="product-price">800 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ -->
+            <!-- АЛКОГОЛЬСІЗ СУСЫНДАР -->
             <div class="category" id="bar-cat-16" data-menu-section="bar">
-                <h2 class="category-title">Безалкогольные напитки</h2>
+                <h2 class="category-title">Алкогольсіз сусындар</h2>
 
                 <article class="product">
                     <div class="product-info">
@@ -1114,7 +1114,7 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Bona тоник</h3>
+                        <h3 class="product-name">Bona тонигі</h3>
                         <div class="product-volume">0,33 л</div>
                     </div>
                     <div class="product-price">800 <span class="price-unit">₸</span></div>
@@ -1152,9 +1152,9 @@ footer {
                 </article>
             </div>
 
-            <!-- ЛИМОНАДЫ -->
+            <!-- ЛИМОНАДТАР -->
             <div class="category" id="bar-cat-17" data-menu-section="bar">
-                <h2 class="category-title">Лимонады</h2>
+                <h2 class="category-title">Лимонадтар</h2>
 
                 <article class="product">
                     <div class="product-info">
@@ -1174,7 +1174,7 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Ягодный</h3>
+                        <h3 class="product-name">Жидек</h3>
                         <div class="product-volume">1 л</div>
                     </div>
                     <div class="product-price">2 000 <span class="price-unit">₸</span></div>
@@ -1182,7 +1182,7 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Тропический</h3>
+                        <h3 class="product-name">Тропикалық</h3>
                         <div class="product-volume">1 л</div>
                     </div>
                     <div class="product-price">2 000 <span class="price-unit">₸</span></div>
@@ -1191,29 +1191,29 @@ footer {
 
             
 
-            <!-- ЧАИ -->
+            <!-- ШАЙЛАР -->
             <div class="category" id="bar-cat-19" data-menu-section="bar">
-                <h2 class="category-title">Чаи</h2>
+                <h2 class="category-title">Шайлар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Чай черный</h3>
-                        <div class="product-volume">1 л / за кружку</div>
+                        <h3 class="product-name">Қара шай</h3>
+                        <div class="product-volume">1 л / бір кесе</div>
                     </div>
                     <div class="product-price">1 500 / 300 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Чай зелёный</h3>
-                        <div class="product-volume">1 л / за кружку</div>
+                        <h3 class="product-name">Көк шай</h3>
+                        <div class="product-volume">1 л / бір кесе</div>
                     </div>
                     <div class="product-price">1 500 / 300 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Чай ташкентский</h3>
+                        <h3 class="product-name">Ташкент шайы</h3>
                         <div class="product-volume">1 л</div>
                     </div>
                     <div class="product-price">2 000 <span class="price-unit">₸</span></div>
@@ -1221,24 +1221,24 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Чай по казахски</h3>
-                        <div class="product-volume">1 л / за кружку</div>
+                        <h3 class="product-name">Қазақша шай</h3>
+                        <div class="product-volume">1 л / бір кесе</div>
                     </div>
                     <div class="product-price">1 500 / 300 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Чай вкусовой</h3>
+                        <h3 class="product-name">Дәмді шай</h3>
                         <div class="product-volume">1 л</div>
                     </div>
                     <div class="product-price">2 000 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- К ЧАЮ -->
+            <!-- ШАЙҒА -->
             <div class="category" id="bar-cat-20" data-menu-section="bar">
-                <h2 class="category-title">К чаю</h2>
+                <h2 class="category-title">Шайға</h2>
 
                 <article class="product">
                     <div class="product-info">
@@ -1256,427 +1256,427 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Мёд</h3>
+                        <h3 class="product-name">Бал</h3>
                     </div>
                     <div class="product-price">800 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Сигареты в ассортименте</h3>
+                        <h3 class="product-name">Түрлі темекі</h3>
                     </div>
                     <div class="product-price">2 500 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Стики на IQOS</h3>
+                        <h3 class="product-name">IQOS стиктері</h3>
                     </div>
                     <div class="product-price">2 500 <span class="price-unit">₸</span></div>
                 </article>
             </div>
         </section>
 
-        <!-- ================= КУХНЯ ================= -->
+        <!-- ================= АСХАНА ================= -->
         <section class="menu-section" id="kitchen">
 
-            <!-- БЛЮДА НА КОМПАНИЮ -->
+            <!-- КОМПАНИЯҒА АРНАЛҒАН ТАҒАМДАР -->
             <div class="category" id="kitchen-cat-14" data-menu-section="kitchen">
-                <h2 class="category-title">Блюда на компанию</h2>
+                <h2 class="category-title">Компанияға арналған тағамдар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Ассорти колбасок</h3>
+                        <h3 class="product-name">Шұжықтар ассортиі</h3>
                     </div>
                     <div class="product-price">20 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Казан кебаб из баранины</h3>
+                        <h3 class="product-name">Қой етінен қазан кебаб</h3>
                     </div>
                     <div class="product-price">45 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Казан кебаб из конины</h3>
+                        <h3 class="product-name">Жылқы етінен қазан кебаб</h3>
                     </div>
                     <div class="product-price">50 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Томлённые рёбра барбекю</h3>
+                        <h3 class="product-name">Баяу пісірілген барбекю қабырғалары</h3>
                     </div>
                     <div class="product-price">48 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Ассорти шашлыков</h3>
+                        <h3 class="product-name">Кәуаптар ассортиі</h3>
                     </div>
                     <div class="product-price">32 000 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- САЛАТЫ -->
+            <!-- САЛАТТАР -->
             <div class="category" id="kitchen-cat-1" data-menu-section="kitchen">
-                <h2 class="category-title">Салаты</h2>
+                <h2 class="category-title">Салаттар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Салат с баклажанами</h3>
+                        <h3 class="product-name">Баклажан қосылған салат</h3>
                     </div>
                     <div class="product-price">3 600 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Цезарь с курицей</h3>
+                        <h3 class="product-name">Тауық еті қосылған Цезарь</h3>
                     </div>
                     <div class="product-price">3 400 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Цезарь с семгой</h3>
+                        <h3 class="product-name">Сёмга балығы қосылған Цезарь</h3>
                     </div>
                     <div class="product-price">4 100 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Цезарь с креветками</h3>
+                        <h3 class="product-name">Асшаян қосылған Цезарь</h3>
                     </div>
                     <div class="product-price">4 600 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Салат к пенному</h3>
+                        <h3 class="product-name">Сыраға арналған салат</h3>
                     </div>
                     <div class="product-price">3 800 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Салат греческий</h3>
+                        <h3 class="product-name">Грек салаты</h3>
                     </div>
                     <div class="product-price">3 300 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Салат с цыплёнком</h3>
+                        <h3 class="product-name">Бапан еті қосылған салат</h3>
                     </div>
                     <div class="product-price">4 300 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Салат море сёмги</h3>
+                        <h3 class="product-name">Сёмга теңізі салаты</h3>
                     </div>
                     <div class="product-price">5 200 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Салат тёплый с кониной</h3>
+                        <h3 class="product-name">Жылқы еті қосылған жылы салат</h3>
                     </div>
                     <div class="product-price">5 000 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- ХОЛОДНЫЕ ЗАКУСКИ -->
+            <!-- СУЫҚ ТІСБАСАРЛАР -->
             <div class="category" id="kitchen-cat-2" data-menu-section="kitchen">
-                <h2 class="category-title">Холодные закуски</h2>
+                <h2 class="category-title">Суық тісбасарлар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Овощная нарезка</h3>
+                        <h3 class="product-name">Көкөніс тілімдері</h3>
                     </div>
                     <div class="product-price">3 400 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Закуска к водочке</h3>
+                        <h3 class="product-name">Араққа тісбасар</h3>
                     </div>
                     <div class="product-price">4 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Соленья с погребка</h3>
+                        <h3 class="product-name">Тұздалған көкөністер</h3>
                     </div>
                     <div class="product-price">3 800 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Огурцы редис в азиатском стиле</h3>
+                        <h3 class="product-name">Азия стиліндегі қияр мен шалғам</h3>
                     </div>
                     <div class="product-price">2 800 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Маринованные шампиньоны</h3>
+                        <h3 class="product-name">Маринадталған қозықұйрықтар</h3>
                     </div>
                     <div class="product-price">3 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Нарезка с казы</h3>
+                        <h3 class="product-name">Қазы тілімдері</h3>
                     </div>
                     <div class="product-price">8 200 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Нарезка с семгой</h3>
+                        <h3 class="product-name">Сёмга тілімдері</h3>
                     </div>
                     <div class="product-price">8 200 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Квашеная капуста с клюквой</h3>
+                        <h3 class="product-name">Мүкжидек қосылған ашытылған қырыққабат</h3>
                     </div>
                     <div class="product-price">2 800 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- СТЕЙКИ -->
+            <!-- СТЕЙКТЕР -->
             <div class="category" id="kitchen-cat-3" data-menu-section="kitchen">
-                <h2 class="category-title">Стейки</h2>
+                <h2 class="category-title">Стейктер</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Рибай без костей говяжий</h3>
+                        <h3 class="product-name">Сүйексіз сиыр рибайы</h3>
                     </div>
                     <div class="product-price">9 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Тибон говяжий</h3>
+                        <h3 class="product-name">Сиыр тибоны</h3>
                     </div>
                     <div class="product-price">8 500 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Рибай на кости говяжий</h3>
+                        <h3 class="product-name">Сүйекті сиыр рибайы</h3>
                     </div>
                     <div class="product-price">8 500 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Рибай конина на кости</h3>
+                        <h3 class="product-name">Сүйекті жылқы рибайы</h3>
                     </div>
                     <div class="product-price">10 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Стейк из сёмги</h3>
+                        <h3 class="product-name">Сёмга стейгі</h3>
                     </div>
                     <div class="product-price">8 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Говяжие рёбра барбекю</h3>
+                        <h3 class="product-name">Сиырдың барбекю қабырғалары</h3>
                     </div>
                     <div class="product-price">15 000 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- КОЛБАСКИ -->
+            <!-- ШҰЖЫҚТАР -->
             <div class="category" id="kitchen-cat-4" data-menu-section="kitchen">
-                <h2 class="category-title">Колбаски</h2>
+                <h2 class="category-title">Шұжықтар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Колбаски с курицей</h3>
+                        <h3 class="product-name">Тауық етінен шұжықтар</h3>
                     </div>
                     <div class="product-price">8 500 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Колбаски с говядиной</h3>
+                        <h3 class="product-name">Сиыр етінен шұжықтар</h3>
                     </div>
                     <div class="product-price">8 500 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Колбаски с ягнёнка</h3>
+                        <h3 class="product-name">Қозы етінен шұжықтар</h3>
                     </div>
                     <div class="product-price">8 500 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- ШАШЛЫК -->
+            <!-- КӘУАП -->
             <div class="category" id="kitchen-cat-5" data-menu-section="kitchen">
-                <h2 class="category-title">Шашлык</h2>
+                <h2 class="category-title">Кәуап</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Утка</h3>
+                        <h3 class="product-name">Үйрек</h3>
                     </div>
                     <div class="product-price">3 800 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Баранина на кости</h3>
+                        <h3 class="product-name">Сүйекті қой еті</h3>
                     </div>
                     <div class="product-price">5 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Шашлык из филе цыплёнка</h3>
+                        <h3 class="product-name">Бапан сүбесінен кәуап</h3>
                     </div>
                     <div class="product-price">3 600 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Говядина с курдюком</h3>
+                        <h3 class="product-name">Құйрық май қосылған сиыр еті</h3>
                     </div>
                     <div class="product-price">6 000 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- ГОРЯЧИЕ ЗАКУСКИ -->
+            <!-- ЫСТЫҚ ТІСБАСАРЛАР -->
             <div class="category" id="kitchen-cat-6" data-menu-section="kitchen">
-                <h2 class="category-title">Горячие закуски</h2>
+                <h2 class="category-title">Ыстық тісбасарлар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Фри пати микс с колбасками</h3>
+                        <h3 class="product-name">Шұжық қосылған фри пати микс</h3>
                     </div>
                     <div class="product-price">4 200 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Фри пати микс с цыплёнком</h3>
+                        <h3 class="product-name">Бапан еті қосылған фри пати микс</h3>
                     </div>
                     <div class="product-price">4 200 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Бараньи семечки</h3>
+                        <h3 class="product-name">Қой шемішкесі</h3>
                     </div>
                     <div class="product-price">3 600 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Гарлики</h3>
+                        <h3 class="product-name">Гарликтер</h3>
                     </div>
                     <div class="product-price">1 800 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Жаренный чечил</h3>
+                        <h3 class="product-name">Қуырылған чечил</h3>
                     </div>
                     <div class="product-price">2 200 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Креветки пивные</h3>
+                        <h3 class="product-name">Сыраға арналған асшаяндар</h3>
                     </div>
                     <div class="product-price">5 800 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Стрипсы куриные</h3>
+                        <h3 class="product-name">Тауық стрипстері</h3>
                     </div>
                     <div class="product-price">3 600 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Сырные палочки</h3>
+                        <h3 class="product-name">Ірімшік таяқшалары</h3>
                     </div>
                     <div class="product-price">3 400 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Чебуреки</h3>
+                        <h3 class="product-name">Чебуректер</h3>
                     </div>
                     <div class="product-price">4 200 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Пивной сет 1</h3>
+                        <h3 class="product-name">Сыра сеті 1</h3>
                     </div>
                     <div class="product-price">12 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Пивной сет 2</h3>
+                        <h3 class="product-name">Сыра сеті 2</h3>
                     </div>
                     <div class="product-price">8 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Пивной сет 3</h3>
+                        <h3 class="product-name">Сыра сеті 3</h3>
                     </div>
                     <div class="product-price">14 000 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- СУПЫ -->
+            <!-- СОРПАЛАР -->
             <div class="category" id="kitchen-cat-7" data-menu-section="kitchen">
-                <h2 class="category-title">Супы</h2>
+                <h2 class="category-title">Сорпалар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Пельмени том ям</h3>
+                        <h3 class="product-name">Том ям тұшпарасы</h3>
                     </div>
                     <div class="product-price">3 800 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Суп лапша по-домашнему с кониной</h3>
+                        <h3 class="product-name">Жылқы етінен үй кеспе сорпасы</h3>
                     </div>
                     <div class="product-price">3 800 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Уха по царски</h3>
+                        <h3 class="product-name">Патшалық балық сорпасы (уха)</h3>
                     </div>
                     <div class="product-price">4 300 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- ПИЦЦЫ -->
+            <!-- ПИЦЦАЛАР -->
             <div class="category" id="kitchen-cat-8" data-menu-section="kitchen">
-                <h2 class="category-title">Пиццы</h2>
+                <h2 class="category-title">Пиццалар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Маргарита с халапенью</h3>
+                        <h3 class="product-name">Халапеньо қосылған Маргарита</h3>
                     </div>
                     <div class="product-price">4 000 <span class="price-unit">₸</span></div>
                 </article>
@@ -1690,26 +1690,26 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">С курицей и грибами</h3>
+                        <h3 class="product-name">Тауық еті мен саңырауқұлақ қосылған</h3>
                     </div>
                     <div class="product-price">4 100 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">От шефа</h3>
+                        <h3 class="product-name">Бас аспаздан</h3>
                     </div>
                     <div class="product-price">6 000 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- РОЛЛЫ -->
+            <!-- РОЛЛДАР -->
             <div class="category" id="kitchen-cat-9" data-menu-section="kitchen">
-                <h2 class="category-title">Роллы</h2>
+                <h2 class="category-title">Роллдар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Поцелуй гейши</h3>
+                        <h3 class="product-name">Гейша сүйісі</h3>
                     </div>
                     <div class="product-price">3 800 <span class="price-unit">₸</span></div>
                 </article>
@@ -1723,7 +1723,7 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Аляска с креветками</h3>
+                        <h3 class="product-name">Асшаян қосылған Аляска</h3>
                     </div>
                     <div class="product-price">5 200 <span class="price-unit">₸</span></div>
                 </article>
@@ -1744,19 +1744,19 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Сет роллов</h3>
+                        <h3 class="product-name">Роллдар сеті</h3>
                     </div>
                     <div class="product-price">15 000 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- ГОРЯЧЕЕ -->
+            <!-- ЫСТЫҚ ТАҒАМДАР -->
             <div class="category" id="kitchen-cat-10" data-menu-section="kitchen">
-                <h2 class="category-title">Горячее</h2>
+                <h2 class="category-title">Ыстық тағамдар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Жульен с курицей и грибами</h3>
+                        <h3 class="product-name">Тауық еті мен саңырауқұлақ қосылған жюльен</h3>
                     </div>
                     <div class="product-price">4 800 <span class="price-unit">₸</span></div>
                 </article>
@@ -1770,59 +1770,59 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Говяжьи рёбра барбекю</h3>
+                        <h3 class="product-name">Сиырдың барбекю қабырғалары</h3>
                     </div>
                     <div class="product-price">12 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Филе тунца в кальмаре с говяжим беконом</h3>
+                        <h3 class="product-name">Сиыр беконымен кальмардағы тунец сүбесі</h3>
                     </div>
                     <div class="product-price">11 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Морской дуэт креветок и мидии</h3>
+                        <h3 class="product-name">Асшаян мен мидиядан теңіз дуэті</h3>
                     </div>
                     <div class="product-price">12 000 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- ПАСТЫ -->
+            <!-- ПАСТАЛАР -->
             <div class="category" id="kitchen-cat-11" data-menu-section="kitchen">
-                <h2 class="category-title">Пасты</h2>
+                <h2 class="category-title">Пасталар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Фетучини с курицей и грибами</h3>
+                        <h3 class="product-name">Тауық еті мен саңырауқұлақ қосылған фетучини</h3>
                     </div>
                     <div class="product-price">4 000 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Фетучини с лососем</h3>
+                        <h3 class="product-name">Лосось қосылған фетучини</h3>
                     </div>
                     <div class="product-price">4 300 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- СОУСЫ -->
+            <!-- ТҰЗДЫҚТАР -->
             <div class="category" id="kitchen-cat-12" data-menu-section="kitchen">
-                <h2 class="category-title">Соусы</h2>
+                <h2 class="category-title">Тұздықтар</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Сырный</h3>
+                        <h3 class="product-name">Ірімшік</h3>
                     </div>
                     <div class="product-price">500 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Горчичный</h3>
+                        <h3 class="product-name">Қыша</h3>
                     </div>
                     <div class="product-price">500 <span class="price-unit">₸</span></div>
                 </article>
@@ -1843,26 +1843,26 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Красный</h3>
+                        <h3 class="product-name">Қызыл</h3>
                     </div>
                     <div class="product-price">500 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Белый</h3>
+                        <h3 class="product-name">Ақ</h3>
                     </div>
                     <div class="product-price">500 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- ГАРНИРЫ -->
+            <!-- ГАРНИРЛЕР -->
             <div class="category" id="kitchen-cat-13" data-menu-section="kitchen">
-                <h2 class="category-title">Гарниры</h2>
+                <h2 class="category-title">Гарнирлер</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Овощи гриль</h3>
+                        <h3 class="product-name">Гриль көкөністері</h3>
                     </div>
                     <div class="product-price">3 000 <span class="price-unit">₸</span></div>
                 </article>
@@ -1876,54 +1876,54 @@ footer {
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Шампиньоны на мангале</h3>
+                        <h3 class="product-name">Отта піскен қозықұйрықтар</h3>
                     </div>
                     <div class="product-price">2 500 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Рис в японском стиле</h3>
+                        <h3 class="product-name">Жапон стиліндегі күріш</h3>
                     </div>
                     <div class="product-price">1 500 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Стручковая фасоль</h3>
+                        <h3 class="product-name">Қабықты үрмебұршақ</h3>
                     </div>
                     <div class="product-price">2 500 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Брокколи и морковь бейби в сливочном соусе</h3>
+                        <h3 class="product-name">Кілегей тұздығындағы брокколи мен бейби сәбіз</h3>
                     </div>
                     <div class="product-price">3 200 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Хлебная корзина</h3>
+                        <h3 class="product-name">Нан себеті</h3>
                     </div>
                     <div class="product-price">1 500 <span class="price-unit">₸</span></div>
                 </article>
             </div>
 
-            <!-- ДЕСЕРТЫ -->
+            <!-- ДЕСЕРТТЕР -->
             <div class="category" id="kitchen-cat-15" data-menu-section="kitchen">
-                <h2 class="category-title">Десерты</h2>
+                <h2 class="category-title">Десерттер</h2>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Фруктовая тарелка</h3>
+                        <h3 class="product-name">Жеміс табағы</h3>
                     </div>
                     <div class="product-price">4 800 <span class="price-unit">₸</span></div>
                 </article>
 
                 <article class="product">
                     <div class="product-info">
-                        <h3 class="product-name">Сливочное мороженое</h3>
+                        <h3 class="product-name">Кілегейлі балмұздақ</h3>
                     </div>
                     <div class="product-price">1 500 <span class="price-unit">₸</span></div>
                 </article>
@@ -1934,13 +1934,13 @@ footer {
 
     </main>
 
-    <!-- ПОДВАЛ -->
+    <!-- ТӨМЕНГІ БӨЛІМ -->
     <footer>
         <div class="age">18+</div>
-        <div class="footer-text">Чрезмерное употребление алкоголя вредит вашему здоровью.</div>
+        <div class="footer-text">Алкогольді шамадан тыс тұтыну денсаулығыңызға зиян.</div>
     </footer>
 
-    <!-- НАВИГАЦИЯ ПО КАТЕГОРИЯМ -->
+    <!-- САНАТТАР БОЙЫНША НАВИГАЦИЯ -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sections = {
@@ -1952,7 +1952,7 @@ footer {
                 kitchen: document.getElementById('kitchen-categories')
             };
 
-            // Кнопки создаются из заголовков, поэтому названия и ссылки всегда совпадают.
+            // Батырмалар тақырыптардан жасалады, сондықтан атаулары мен сілтемелері әрдайым сәйкес келеді.
             Object.entries(sections).forEach(([sectionName, section]) => {
                 if (!section || !navContainers[sectionName]) return;
                 section.querySelectorAll('.category').forEach(category => {
